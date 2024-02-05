@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('consultation_payments', function (Blueprint $table) {
             $table->id();
             $table->string('reference')->unique();
+            $table->string('amount');
+            $table->enum('status', ['unpaid', 'paid'])->default('unpaid');
             $table->timestamps();
         });
     }

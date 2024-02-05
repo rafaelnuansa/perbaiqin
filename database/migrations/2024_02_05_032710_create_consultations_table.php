@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('technician_id');
-            $table->string('amount');
+            $table->string('price');
             $table->enum('status', ['pending', 'ongoing', 'completed']);
             $table->timestamps();
         });
